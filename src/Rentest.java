@@ -10,7 +10,7 @@ public class Rentest {
         String[] basyo = new String[cnt];
         int[] sa = new int[cnt];
         //時間と場所の読み込み
-        for(int i = 0;i < cnt;) {
+        for(int i = 0;i < cnt;i++) {
             line = sc.nextLine();
             String[] array = line.split(" ");
             basyo[i] = array[0];

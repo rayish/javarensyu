@@ -29,11 +29,21 @@ public class Rentest {
         String[] array2 = arrays[1].split(":",0);
         int zi = Integer.parseInt(array2[0]);
         int fun = Integer.parseInt(array2[1]);
-        int zisa;
+        int zisa = 0;
+        int zikan = 0;
         for (int i = 0;i < cnt;i++) {
-            zisa = sa[i] - sa[iti];
-
+            zisa = sa[i] - sa[iti];     //時差
+            zikan = zi + zisa;          //時＋時差
+            if (zikan < 0) {
+                zikan = 24 - zikan;
+            } else if (zikan > 24) {
+                zikan -= 24;
+            }
+            if (zikan < 10) {
+                System.out.println("0" + zikan + ":" + fun);
+            } else {
+                System.out.println(zikan + ":" + fun);
+            }
         }
-        System.out.println("xx");
     }
 }

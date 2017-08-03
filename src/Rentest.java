@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Rentest {
+public class Main {
     public static void main(String[] args) {
         // 自分の得意な言語で
         // Let's チャレンジ！！
@@ -29,8 +29,7 @@ public class Rentest {
         String[] array2 = arrays[1].split(":",0);
         int zi = Integer.parseInt(array2[0]);   //基準時
         int fun = Integer.parseInt(array2[1]);  //基準分
-        int zisa = 0;
-        int zikan = 0;
+        int zisa;
         int zikan = 0;
         for (int i = 0;i < cnt;i++) {
             zisa = sa[i] - sa[iti];     //時間差を求める

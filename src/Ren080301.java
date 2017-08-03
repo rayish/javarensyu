@@ -5,10 +5,10 @@ class Kaimono {
 	int kingaku() {
 		return tanka * suryo;
 	}
-	double tax() {
-		return kingaku() * 0.08;
+	int tax() {
+		return (int)(kingaku() * 0.08);
 	}
-	double gokei() {
+	int gokei() {
 		return kingaku() + tax();
 	}
 }

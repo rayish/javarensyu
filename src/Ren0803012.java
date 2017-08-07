@@ -3,8 +3,9 @@ class Cars {
 	private double gas;
 	
 	public Cars() {
-		num = 0;
-		gas = 0.0;
+//		num = 0;
+//		gas = 0.0;
+		this(0, 0.0);
 		System.out.println("車を作成しました。");
 	}
 	public Cars(int n, double g) {

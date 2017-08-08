@@ -1,8 +1,8 @@
 //車クラス
 class Car2 {
-	private int num;
+	int num;
 	private double gas;
-	private String name;
+	String name;
 	public  Car2() {
 		num = 0;
 		gas = 0.0;
@@ -25,6 +25,11 @@ class Car2 {
 	}
 }
 public class Ren0807011 {
+	static void setNameNum(Car2 car,int number) {
+		car.name = "abc";
+		car.num = 9876;
+		number = 9876;
+	}
 
 	public static void main(String[] args) {
 		Car2 car1 = new Car2();
@@ -35,6 +40,10 @@ public class Ren0807011 {
 		car1.setCar(number,  gasoline);
 		car1.setName(str);
 		car1.show();
+		
+		setNameNum(car1, number);
+		System.out.println(car1.num + "です。");
+		System.out.println(number + "です。");
 	}
 
 }

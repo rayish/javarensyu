@@ -28,7 +28,7 @@ public class Ren080802 {
 
 	public static void main(String[] args) {
 		int r = 10;
-		int takasa = 10;
+		int takasa = 20;
 		Ensui[] ens;
 		ens = new Ensui[2];
 		ens[0] = new Ensui();

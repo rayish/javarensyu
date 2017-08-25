@@ -16,8 +16,25 @@ public class Sample4 extends Frame {
 		bt = new Button("ようこそ。");
 		add(bt);
 		addWindowListener(new SampleWindowListener());
-		bt.addMouseListener(new SampleMouseAdapter());
+		bt.addMouseListener(new MouseAdapter() {	//無名クラス
+			private int i = 0;
+			public void mouseClicked(MouseEvent e) {
+				if (i%2 == 0) {
+					bt.setLabel("こんにちは");
+				} else {
+					bt.setLabel("ようこそ");
+				}
+				i++;
+			}
+			public void mouseEntered(MouseEvent e) {
+				bt.setLabel("いらっしゃいませ。");
+			}
+			public void mouseExited(MouseEvent e) {
+				bt.setLabel("ようこそ");
+			}
+		});
 //		bt.addActionListener(new SampleActionListener());
+//		bt.addMouseListener(new SampleMouseAdapter());
 		
 		setSize(250, 200);
 		setVisible(true);
@@ -28,22 +45,22 @@ public class Sample4 extends Frame {
 		}
 	}
 //	class SampleActionListener implements ActionListener {
-	class SampleMouseAdapter extends MouseAdapter {
-		private int i = 0;
-		public void mouseClicked(MouseEvent e) {
-			if (i%2 == 0) {
-				bt.setLabel("こんにちは");
-			} else {
-				bt.setLabel("ようこそ");
-			}
-			i++;
-		}
-		public void mouseEntered(MouseEvent e) {
-			bt.setLabel("いらっしゃいませ。");
-		}
-		public void mouseExited(MouseEvent e) {
-			bt.setLabel("ようこそ");
-		}
-	}
+//	class SampleMouseAdapter extends MouseAdapter {
+//		private int i = 0;
+//		public void mouseClicked(MouseEvent e) {
+//			if (i%2 == 0) {
+//				bt.setLabel("こんにちは");
+//			} else {
+//				bt.setLabel("ようこそ");
+//			}
+//			i++;
+//		}
+//		public void mouseEntered(MouseEvent e) {
+//			bt.setLabel("いらっしゃいませ。");
+//		}
+//		public void mouseExited(MouseEvent e) {
+//			bt.setLabel("ようこそ");
+//		}
+//	}
 
 }

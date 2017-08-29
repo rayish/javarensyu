@@ -18,21 +18,26 @@ public class Typing01 extends Frame {
 		new Typing01();
 	}
 	public Typing01() {
+		//タイトルの設定
 		super("簡易タイピング練習プログラム");
 		
+		//リスナーの設定
 		addWindowListener(new TypingWindowListener());
 		addKeyListener(new TypingKeyListener());
 		
+		//フレームの設定
 		setSize(600, 400);
 		setVisible(true);
 	}
 	
 	public void paint(Graphics g) {
+		//文字の表示位置
 		int pointX = 250;
 		int pointY = 275;
 		
 		g.clearRect(0, 0, 600, 400);
 		
+		//ランダム値の取得（０～２４の整数値）
 		int i = (int)(Math.random()*25);
 		ch1 = (char)(i + 0x0041);
 		

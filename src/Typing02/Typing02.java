@@ -17,17 +17,17 @@ public class Typing02 extends Applet {
 	}
 
 	public void paint(Graphics g) {
-	int pointX = 250;
-	int pointY = 275;
-
-	g.clearRect(0, 0, 600, 400);
-
-	int i = (int)(Math.random()*25);
-	ch1 = (char)(i + 0x0041);
-
-	g.setColor(Color.blue);
-	g.setFont(new Font("Serif",Font.BOLD,200));
-	g.drawChars(dc, i, 1, pointX, pointY);
+		int pointX = 250;
+		int pointY = 275;
+	
+		g.clearRect(0, 0, 600, 400);
+	
+		int i = (int)(Math.random()*25);
+		ch1 = (char)(i + 0x0041);
+	
+		g.setColor(Color.blue);
+		g.setFont(new Font("Serif",Font.BOLD,200));
+		g.drawChars(dc, i, 1, pointX, pointY);
 	}
 
 	class TypingKeyListener extends KeyAdapter {
